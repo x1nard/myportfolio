@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xinard's Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+        }
+        header {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #1a1a1a;
+        }
+        h1 {
+            font-size: 3rem;
+            color: #fff;
+            text-transform: uppercase;
+            margin: 0;
+        }
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        .portfolio-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .portfolio-item {
+            width: calc(33.333% - 20px);
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            transition: transform 0.3s ease-in-out;
+        }
+        .portfolio-item:hover {
+            transform: scale(1.05);
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        footer {
+            background-color: #1a1a1a;
+            text-align: center;
+            padding: 20px;
+            color: #fff;
+        }
+        /* Стили для разделов */
+        .media-section {
+            margin: 40px 0;
+        }
+        .video-grid, .audio-grid {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .video-item, .audio-item {
+            width: 45%;
+            text-align: center;
+        }
+        video, audio {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Xinard's Portfolio</h1>
+</header>
+
+<div class="container">
+    <h2>Artwork</h2>
+    <div class="portfolio-grid">
+        <div class="portfolio-item">
+            <img src="greengrl.png" alt="Green Girl">
+        </div>
+        <div class="portfolio-item">
+            <img src="y2k brown.png" alt="Y2K Brown">
+        </div>
+        <div class="portfolio-item">
+            <img src="catcat.png" alt="Cat Artwork">
+        </div>
+        <div class="portfolio-item">
+            <img src="glitch240tt.png" alt="Glitch1 Artwork">
+        </div>
+        <div class="portfolio-item">
+            <img src="glitch1128.jpg" alt="Glitch2 Artwork">
+        </div>
+        <div class="portfolio-item">
+            <img src="ONA5.png" alt="Glitch3 Artwork">
+        </div>
+        <div class="portfolio-item">
+            <img src="eto vtoroj.png" alt="Glitch4 Artwork">
+        </div>
+        <div class="portfolio-item">
+            <img src="green.png" alt="Car Artwork">
+        </div>
+        <div class="portfolio-item">
+            <img src="zerkalakabest.png" alt="Glitch6 Artwork">
+        </div>
+        <div class="portfolio-item">
+            <img src="NL.png" alt="No Love Artwork">
+        </div>
+    </div>
+</div>
+
+<!-- Раздел для видео -->
+<div class="container media-section">
+    <h2>Video</h2>
+    <div class="video-grid">
+        <div class="video-item">
+            <video controls>
+                <source src="carti1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="video-item">
+            <video controls>
+                <source src="VVV.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="video-item">
+            <video controls>
+                <source src="travis.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="video-item">
+            <video controls>
+                <source src="quadro.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="video-item">
+            <video controls>
+                <source src="yeat.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+</div>
+
+<!-- Раздел для музыки -->
+<div class="container media-section">
+    <h2>Music</h2>
+    <div class="audio-grid">
+        <div class="audio-item">
+            <audio controls>
+                <source src="sad oi piu(proud) alternative version.mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+        <div class="audio-item">
+            <audio controls>
+                <source src="raaaack.wav" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+        <div class="audio-item">
+            <audio controls>
+                <source src="tdzd.mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+        <div class="audio-item">
+            <audio controls>
+                <source src="do slez.wav" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+        <div class="audio-item">
+            <audio controls>
+                <source src="Escape - Juice Wrld x Lil Peep Type Loop(forever).wav" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+        <div class="audio-item">
+            <audio controls>
+                <source src="evil, aggressive, dark, synth, osamason, yeat, homixide gang, opium, playboi carti, kankan, destroy lonely, ken carson.mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+        <div class="audio-item">
+            <audio controls>
+                <source src="GUITAAARIST.wav" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+        <div class="audio-item">
+            <audio controls>
+                <source src="rnb club.mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Xinard</p>
+</footer>
+
+</body>
+</html>
