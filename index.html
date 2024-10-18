@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Xinard's portfolio showcasing artwork, videos, and music. Explore visual and audio creations.">
     <title>Xinard's Portfolio</title>
     <style>
         body {
@@ -32,27 +33,27 @@
             width: 90%;
             margin: 0 auto;
             padding: 20px 0;
+            max-width: 1200px;
         }
-        .portfolio-grid {
+        .media-grid {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             gap: 20px;
+            text-align: center;
         }
-        .portfolio-item {
+        .media-item {
             width: calc(33.333% - 20px);
-            border-radius: 15px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-            overflow: hidden;
-            transition: transform 0.3s ease-in-out;
+            max-width: 400px;
+            margin-bottom: 20px;
         }
-        .portfolio-item:hover {
-            transform: scale(1.05);
-        }
-        .portfolio-item img {
+        .media-item img, .media-item video, .media-item audio {
             width: 100%;
             height: auto;
             object-fit: cover;
+        }
+        .media-item video, .media-item audio {
+            max-width: 600px; /* Ограничение для видео и аудио */
         }
         footer {
             background-color: #1a1a1a;
@@ -60,22 +61,11 @@
             padding: 20px;
             color: #fff;
         }
-        /* Стили для разделов */
-        .media-section {
-            margin: 40px 0;
-        }
-        .video-grid, .audio-grid {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .video-item, .audio-item {
-            width: 45%;
-            text-align: center;
-        }
-        video, audio {
-            width: 100%;
+        /* Адаптивный дизайн */
+        @media (max-width: 768px) {
+            .media-item {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -85,126 +75,125 @@
     <h1>Xinard's Portfolio</h1>
 </header>
 
+<!-- Один контейнер для всех секций с подзаголовками -->
 <div class="container">
+
+    <!-- Artwork Section -->
     <h2>Artwork</h2>
-    <div class="portfolio-grid">
-        <div class="portfolio-item">
-            <img src="greengrl.png" alt="Green Girl">
+    <div class="media-grid">
+        <div class="media-item">
+            <img src="greengrl.png" alt="Illustration of a girl with green tones">
         </div>
-        <div class="portfolio-item">
-            <img src="y2k brown.png" alt="Y2K Brown">
+        <div class="media-item">
+            <img src="y2k brown.png" alt="Y2K style digital artwork with brown tones">
         </div>
-        <div class="portfolio-item">
-            <img src="catcat.png" alt="Cat Artwork">
+        <div class="media-item">
+            <img src="catcat.png" alt="Abstract cat illustration">
         </div>
-        <div class="portfolio-item">
-            <img src="glitch240tt.png" alt="Glitch1 Artwork">
+        <div class="media-item">
+            <img src="glitch240tt.png" alt="Glitch art with distorted colors">
         </div>
-        <div class="portfolio-item">
-            <img src="glitch1128.jpg" alt="Glitch2 Artwork">
+        <div class="media-item">
+            <img src="glitch1128.jpg" alt="Glitch art with fragmented shapes">
         </div>
-        <div class="portfolio-item">
-            <img src="ONA5.png" alt="Glitch3 Artwork">
+        <div class="media-item">
+            <img src="ONA5.png" alt="Experimental glitch-style artwork">
         </div>
-        <div class="portfolio-item">
-            <img src="eto vtoroj.png" alt="Glitch4 Artwork">
+        <div class="media-item">
+            <img src="eto vtoroj.png" alt="Vibrant glitch art with red accents">
         </div>
-        <div class="portfolio-item">
-            <img src="green.png" alt="Car Artwork">
+        <div class="media-item">
+            <img src="green.png" alt="Car illustration with green neon colors">
         </div>
-        <div class="portfolio-item">
-            <img src="zerkalakabest.png" alt="Glitch6 Artwork">
+        <div class="media-item">
+            <img src="zerkalakabest.png" alt="Abstract glitch art with mirror effects">
         </div>
-        <div class="portfolio-item">
-            <img src="NL.png" alt="No Love Artwork">
+        <div class="media-item">
+            <img src="NL.png" alt="No Love artwork with digital textures">
         </div>
     </div>
-</div>
 
-<!-- Раздел для видео -->
-<div class="container media-section">
+    <!-- Video Section -->
     <h2>Video</h2>
-    <div class="video-grid">
-        <div class="video-item">
+    <div class="media-grid">
+        <div class="media-item">
             <video controls>
                 <source src="carti1.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
-        <div class="video-item">
+        <div class="media-item">
             <video controls>
                 <source src="VVV.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
-        <div class="video-item">
+        <div class="media-item">
             <video controls>
                 <source src="travis.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
-        <div class="video-item">
+        <div class="media-item">
             <video controls>
                 <source src="quadro.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
-        <div class="video-item">
+        <div class="media-item">
             <video controls>
                 <source src="yeat.mp4" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
         </div>
     </div>
-</div>
 
-<!-- Раздел для музыки -->
-<div class="container media-section">
+    <!-- Music Section -->
     <h2>Music</h2>
-    <div class="audio-grid">
-        <div class="audio-item">
+    <div class="media-grid">
+        <div class="media-item">
             <audio controls>
                 <source src="sad oi piu(proud) alternative version.mp3" type="audio/mpeg">
                 Your browser does not support the audio tag.
             </audio>
         </div>
-        <div class="audio-item">
+        <div class="media-item">
             <audio controls>
                 <source src="raaaack.mp3" type="audio/mpeg">
                 Your browser does not support the audio tag.
             </audio>
         </div>
-        <div class="audio-item">
+        <div class="media-item">
             <audio controls>
                 <source src="tdzd.mp3" type="audio/mpeg">
                 Your browser does not support the audio tag.
             </audio>
         </div>
-        <div class="audio-item">
+        <div class="media-item">
             <audio controls>
                 <source src="do slez.mp3" type="audio/mpeg">
                 Your browser does not support the audio tag.
             </audio>
         </div>
-        <div class="audio-item">
+        <div class="media-item">
             <audio controls>
                 <source src="Escape - Juice Wrld x Lil Peep Type Loop(forever).mp3" type="audio/mpeg">
                 Your browser does not support the audio tag.
             </audio>
         </div>
-        <div class="audio-item">
+        <div class="media-item">
             <audio controls>
                 <source src="evil, aggressive, dark, synth, osamason, yeat, homixide gang, opium, playboi carti, kankan, destroy lonely, ken carson.mp3" type="audio/mpeg">
                 Your browser does not support the audio tag.
             </audio>
         </div>
-        <div class="audio-item">
+        <div class="media-item">
             <audio controls>
                 <source src="GUITAAARIST.mp3" type="audio/mpeg">
                 Your browser does not support the audio tag.
             </audio>
         </div>
-        <div class="audio-item">
+        <div class="media-item">
             <audio controls>
                 <source src="rnb club.mp3" type="audio/mpeg">
                 Your browser does not support the audio tag.
@@ -219,3 +208,4 @@
 
 </body>
 </html>
+
