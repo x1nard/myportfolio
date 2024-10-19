@@ -46,12 +46,39 @@
             width: calc(33.333% - 20px);
             max-width: 400px;
             margin-bottom: 20px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
         }
-        .media-item img, .media-item video, .media-item audio {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-        }
+        /* Эффекты для изображений и видео */
+.media-item:hover img, 
+.media-item:hover video {
+    transform: scale(1.03); /* Меньшее увеличение, чтобы выглядело более плавно */
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3); /* Мягкая светлая тень */
+}
+
+/* Стандартные стили для медиа */
+.media-item img, 
+.media-item video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Переходы */
+}
+
+/* Стили для аудио */
+.media-item audio {
+    width: 100%;
+    max-width: 600px;
+    border: 2px solid transparent; /* Обычная прозрачная рамка */
+    transition: border-color 0.3s ease-in-out; /* Плавный переход для рамки */
+}
+
+/* Минимальный эффект для аудио */
+.media-item:hover audio {
+    border-color: #555; /* Легкий цвет рамки при наведении */
+}
         .media-item video, .media-item audio {
             max-width: 600px; /* Ограничение для видео и аудио */
         }
@@ -206,6 +233,32 @@
     <p>&copy; 2024 Xinard</p>
 </footer>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Получаем все элементы видео и аудио
+        const mediaElements = document.querySelectorAll('video, audio');
+
+        // Функция для отключения звука у всех медиаплееров, кроме текущего
+        function muteAllMedia(exceptThis) {
+            mediaElements.forEach(media => {
+                if (media !== exceptThis) {
+                    media.muted = true;
+                } else {
+                    media.muted = false; // Включаем звук на текущем элементе
+                }
+            });
+        }
+
+        // Добавляем обработчики событий для каждого видео и аудио
+        mediaElements.forEach(media => {
+            media.addEventListener('play', function() {
+                muteAllMedia(media);
+            });
+        });
+    });
+</script>
+
 </body>
 </html>
+
 
